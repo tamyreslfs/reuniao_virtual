@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat em Tempo Real</title>
+  <link rel="stylesheet" href="/styles.css"> <!-- Linkando o arquivo CSS -->
+  <!-- Adicione esta linha para carregar o Socket.io -->
+  <script src="/socket.io/socket.io.js"></script> 
+  <script defer src="/script.js"></script>   <!-- Linkando o arquivo JS -->
+</head>
+<body>
+  <div class="chat-container">
+    <h2>Chat em Tempo Real</h2>
+
+    <div>
+      <label for="roomId">Sala:</label>
+      <input type="text" id="roomId" placeholder="Digite o ID da sala" />
+    </div>
+    <div>
+      <label for="userName">Seu nome:</label>
+      <input type="text" id="userName" placeholder="Digite seu nome" />
+    </div>
+
+    <button id="joinRoom">Entrar na Sala</button>
+
+    <div class="messages" id="messages"></div>
+
+    <div class="input-container">
+      <input type="text" id="message" class="input-message" placeholder="Digite sua mensagem" />
+      <button id="sendMessage">Enviar</button>
+    </div>
+  </div>
+</body>
+</html>
